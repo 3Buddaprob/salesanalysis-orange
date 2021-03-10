@@ -23,4 +23,6 @@ def run():
     print(f'total sales:{total}')
 
 
+#asdas
+
 run()
