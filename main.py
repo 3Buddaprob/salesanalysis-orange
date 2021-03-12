@@ -23,3 +23,6 @@ def run():
     print(f'total sales:{total}')
 
 run()
+
+#output total sales across all months
+#
