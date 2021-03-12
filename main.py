@@ -22,7 +22,4 @@ def run():
     total = sum(sales)
     print(f'total sales:{total}')
 
-
-#asdas
-
 run()
