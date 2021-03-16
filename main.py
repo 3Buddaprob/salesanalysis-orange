@@ -23,3 +23,4 @@ def run():
     print(f'total sales:{total}') #output total sales
 
 run()
+print(data)
