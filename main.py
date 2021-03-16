@@ -1,7 +1,7 @@
 import csv
 
 
-def read_data() -> object:
+def read_data() -> object: #read data
     data = []
 
     with open('sales.csv', 'r') as sales_csv:
@@ -17,12 +17,9 @@ def run():
 
     for row in data:
         sale = int(row['sales'])
-        sales.append(sale)
+        sales.append(sale) #collect sales
 
     total = sum(sales)
-    print(f'total sales:{total}')
+    print(f'total sales:{total}') #output total sales
 
 run()
-
-#output total sales across all months
-#
