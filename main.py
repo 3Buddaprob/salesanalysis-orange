@@ -14,13 +14,18 @@ def read_data() -> object: #read data
 def run():
     data = read_data()
     sales = []
+    expenditures = []
 
     for row in data:
         sale = int(row['sales'])
         sales.append(sale) #collect sales
+    for row in data:
+        expenditure = int(row['expenditure'])
+        expenditures.append(expenditure) #collect expenditures
 
-    total = sum(sales)
-    print(f'total sales:{total}') #output total sales
+    total_s = sum(sales)
+    total_ex = sum(expenditures)
+    print(f'total sales:{total_s}') #output total sales
+    print(f'total expenditures: {total_ex})
 
 run()
-print(data)
