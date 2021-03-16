@@ -1,0 +1,5 @@
+ sales=[]
+    for row in data:
+        sale= int(row["sales"])
+        sales.append (sale)
+        
