@@ -1,20 +1,18 @@
 import csv
 from typing import List
 
-data=[]
-
+data = []
 with open('sales.csv', 'r') as file:
     reader = csv.DictReader(file)
     for row in reader:
         data.append(row)
-    #return data
 
 sales = []
 for row in data:
     sale = int(row['sales'])
     sales.append(sale)
 
-expenditures=[]
+expenditures = []
 
 for row in data:
     expenditure = int(row['expenditure'])
@@ -22,5 +20,6 @@ for row in data:
     
 total_s = sum(sales)
 total_ex = sum(expenditures)
+
 print(f'total sales:{total_s}') #output total sales
 print(f'total expenditures: {total_ex}')
