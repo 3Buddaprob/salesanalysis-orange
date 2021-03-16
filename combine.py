@@ -1,5 +1,5 @@
 import csv
-import matplotlib.pyplot as plot
+import matplotlib.pyplot as plt
 import seaborn as sns
 
 
