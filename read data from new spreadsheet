@@ -1,0 +1,8 @@
+def read_data() -> object: #read data
+    data = []
+
+    with open('sales2.csv', 'r') as sales2_csv:
+        spreadsheet = csv.DictReader(sales2_csv)
+        for row in spreadsheet:
+            data.append(row)
+    return data
