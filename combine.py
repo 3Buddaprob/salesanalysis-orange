@@ -28,7 +28,7 @@ def graphing():
     x=months
     y=sales
     ax=sns.stripplot(x,y);
-    ax.set(xlabel='months', ylabel='sales')
+    ax.set(xlabel='Months', ylabel='Sales')
     plt.title('Graph')
     plt.show()
 
