@@ -24,3 +24,9 @@ total_s = sum(sales)
 total_ex = sum(expenditures)
 print(f'total sales:{total_s}') #output total sales
 print(f'total expenditures: {total_ex}')
+
+for row in data:
+    print "In row %s, Max = %s" % (index, max(row))
+
+for row in data:
+    print "In row %s, Min = %s" % (index, min(row))
