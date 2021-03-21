@@ -35,6 +35,3 @@ def graphing():
 graphing()
 total_s = sum(sales)
 total_ex = sum(expenditures)
-
-print(f'total sales:{total_s}') #output total sales
-print(f'total expenditures: {total_ex}') #output total expenditures
