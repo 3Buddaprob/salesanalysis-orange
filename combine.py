@@ -26,7 +26,7 @@ print(f'total sales:{total_s}') #output total sales
 print(f'total expenditures: {total_ex}')
 
 for row in data:
-    print "In row %s, Max = %s" % (index, max(row))
+    print "In row {}s, Max = {}s" .format(index, max(row))
 
 for row in data:
-    print "In row %s, Min = %s" % (index, min(row))
+    print "In row {}s, Min = {}s" .format(index, min(row))
