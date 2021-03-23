@@ -50,12 +50,6 @@ def read_data() -> object: #read data
 max_sale=max(sales)
 min_sale=min(sales)
 
-# for row in data:
-#     print ("In row %s, Max = %s" % (index, max(row))
-#
-# for row in data:
-#     print ("In row %s, Min = %s" % (index, min(row))
-
 max_sale_row={}
 def search(sales):
     for x in data:
@@ -63,19 +57,35 @@ def search(sales):
             max_sale_row.update(x)
 
 search(max_sale)
-print(max_sale_row)
+#print(max_sale_row)
 max_sale_yr = max_sale_row['year']
 max_sale_mon = max_sale_row['month']
-print(max_sale_mon,max_sale_yr)
+print(f'Maximum sales: {max_sale} \n Month with Max Sales:{max_sale_mon} \n Year with Max Sales: {max_sale_yr}')
 
-for x in data:
-    a=x['sales']
-    b=x + 1['sales']
-    monthlychange = ((b-a)/b)*100
-    print(monthlychange)
+min_sale_row={}
+def search(sales):
+    for x in data:
+        if int(x['sales']) == int(sales):
+            min_sale_row.update(x)
 
-print(max_sale)
-print(min_sale)
+search(min_sale)
+
+#print(min_sale_row)
+min_sale_yr = min_sale_row['year']
+min_sale_mon = min_sale_row['month']
+print(f'Minimum sales: {min_sale} \n Month with Min Sales: {min_sale_mon} \n Year with Min Sales: {min_sale_yr}')
+
+for x in range(len(sales)):
+    try:
+        a= sales[x]
+        b= sales[x+1]
+        monthlychange = ((b - a) / b) * 100
+        print(f'Monthly change for {x}:{monthlychange}')
+    except IndexError:
+        continue
+
+#print(max_sale)
+#print(min_sale)
 read_data()
 print(data2)
 graphing()
