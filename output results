@@ -1,8 +1,0 @@
-import csv
-  with open('names.csv', newline='') as csvfile:
-    reader = csv.DictReader(csvfile)
-    for row in reader:
-    print(f'total sales:{total_s}') 
-    print(f'total expenditures: {total_ex}')
-    
- run
