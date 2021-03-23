@@ -49,7 +49,8 @@ def read_data() -> object: #read data
 
 max_sale=max(sales)
 min_sale=min(sales)
-
+avg_sale= round(sum(sales) / len(sales),2)
+print(f'Average Sales: £{avg_sale}')
 max_sale_row={}
 def search(sales):
     for x in data:
@@ -60,7 +61,7 @@ search(max_sale)
 #print(max_sale_row)
 max_sale_yr = max_sale_row['year']
 max_sale_mon = max_sale_row['month']
-print(f'Maximum sales: {max_sale} \n Month with Max Sales:{max_sale_mon} \n Year with Max Sales: {max_sale_yr}')
+print(f'Maximum sales: £{max_sale} \n Month with Max Sales:{max_sale_mon} \n Year with Max Sales: {max_sale_yr}')
 
 min_sale_row={}
 def search(sales):
@@ -73,14 +74,14 @@ search(min_sale)
 #print(min_sale_row)
 min_sale_yr = min_sale_row['year']
 min_sale_mon = min_sale_row['month']
-print(f'Minimum sales: {min_sale} \n Month with Min Sales: {min_sale_mon} \n Year with Min Sales: {min_sale_yr}')
+print(f'Minimum sales: £{min_sale} \n Month with Min Sales: {min_sale_mon} \n Year with Min Sales: {min_sale_yr}')
 
 for x in range(len(sales)):
     try:
         a= sales[x]
         b= sales[x+1]
-        monthlychange = ((b - a) / b) * 100
-        print(f'Monthly change for {x}:{monthlychange}')
+        monthlychange = round((((b - a) / b) * 100),2)
+        print(f'Monthly change from month {x} to {x+1}:{monthlychange} %')
     except IndexError:
         continue
 
