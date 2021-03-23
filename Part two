@@ -1,0 +1,5 @@
+for row in data:
+    print "In row %s, Max = %s" % (index, max(row))
+
+for row in data:
+    print "In row %s, Min = %s" % (index, min(row))
